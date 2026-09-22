@@ -1,0 +1,67 @@
+{
+  "name": "jev-sort",
+  "version": "0.1.0",
+  "description": "Non-mutating fuzzy sorting with Jev, batched parallel comparisons, and shared context.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "check": "npm run typecheck && npm test && npm run build",
+    "prepack": "npm run build",
+    "example:tickets": "node --env-file=.env --import=tsx examples/tickets.ts",
+    "example:travel": "node --env-file=.env --import=tsx examples/travel.ts",
+    "example:documents": "node --env-file=.env --import=tsx examples/documents.ts",
+    "test:package": "node scripts/package-smoke.mjs",
+    "test:live": "node --env-file=.env --import=tsx scripts/live-smoke.ts",
+    "benchmark": "tsx benchmarks/parallel.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heddendorp/jev-sort.git"
+  },
+  "homepage": "https://github.com/heddendorp/jev-sort#readme",
+  "bugs": {
+    "url": "https://github.com/heddendorp/jev-sort/issues"
+  },
+  "author": "Lukas heddendorp",
+  "license": "MIT",
+  "keywords": [
+    "sort",
+    "sorting",
+    "fuzzy",
+    "ai",
+    "jev",
+    "typesafe",
+    "typescript",
+    "parallel"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
