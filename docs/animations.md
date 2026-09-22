@@ -29,4 +29,4 @@ npm run docs:gifs
 
 The renderer writes GIFs and PNGs to `docs/assets`, plus decoded GIF contact sheets in `/tmp/fuzzy-sort-contact.png` and `/tmp/parallel-sort-contact.png` for visual review. Typography is rendered at double resolution and downsampled; a shared palette avoids color flicker. Unchanged frames are combined by the GIF encoder. Each GIF must remain below 2 MB.
 
-After rendering, review the initial state, moving cards, intermediate network stages, and final result. Commit the assets alongside any source or README changes. The README uses GitHub raw URLs so its GIFs also resolve when the text is displayed outside the repository; the media is not included in the npm tarball.
+After rendering, review the initial state, moving cards, intermediate network stages, and final result. Commit the assets alongside any source changes, then update the README image URLs to that commit. The README uses pinned GitHub raw URLs to avoid stale branch-image caches and to work when displayed outside the repository; the media is not included in the npm tarball.

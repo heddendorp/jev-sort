@@ -10,7 +10,7 @@ const sorted = await jevSort(tickets, "Most urgent customer issue first", {
 
 You describe the order. Jev compares items. A parallel bitonic sorting network arranges them into a new array, batching independent questions into each API request.
 
-![Support tickets reorder according to a most-urgent-first rule and online-store context, while the original array remains unchanged.](https://raw.githubusercontent.com/heddendorp/jev-sort/main/docs/assets/fuzzy-sort.gif)
+![Support tickets reorder according to a most-urgent-first rule and online-store context, while the original array remains unchanged.](https://raw.githubusercontent.com/heddendorp/jev-sort/2296e359ff75955c3eb36a54964f62041a9db695/docs/assets/fuzzy-sort.gif)
 
 Illustrative playback of the support-ticket example. Model judgments can vary. [View the still image](docs/assets/fuzzy-sort.png).
 
@@ -130,7 +130,7 @@ Install `@typesafe-ai/sdk` as a direct dependency if importing it yourself. SDK 
 
 ## How parallel sorting works
 
-![Eight numbers move through six comparison stages. Four independent questions share each TypeSafe request, and the final array is in ascending order.](https://raw.githubusercontent.com/heddendorp/jev-sort/main/docs/assets/parallel-sort.gif)
+![Eight numbers move through six comparison stages. Four independent questions share each TypeSafe request, and the final array is in ascending order.](https://raw.githubusercontent.com/heddendorp/jev-sort/2296e359ff75955c3eb36a54964f62041a9db695/docs/assets/parallel-sort.gif)
 
 This animation follows the actual network schedule with deterministic numeric judgments and illustrative timing. It shows 24 comparisons in six requests; larger stages can use multiple concurrent requests. [View the still image](docs/assets/parallel-sort.png).
 
