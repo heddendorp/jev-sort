@@ -175,9 +175,12 @@ npm run check          # Typecheck, algorithm/transport tests, build
 npm run test:package   # Install the tarball in a temporary consumer; verify ESM/types
 npm run benchmark     # Simulated request latency; not a Jev performance claim
 npm run test:live     # Opt-in real API smoke test: 8 numbers, at most 24 questions
+npm run benchmark:live # Two real API sorts of 100 synthetic tickets; consumes usage
 ```
 
 The benchmark compares the same sorting network and the same unique comparisons with one question per sequential request versus batched parallel requests. It uses a fixed 5 ms artificial delay per request; actual TypeSafe latency and throughput depend on state size, service load, and account limits.
+
+In a [live 100-ticket benchmark](benchmarks/README.md), default batches took **16.60 s** with **92.85% final pairwise ordering agreement** against an explicit priority policy. Batches of 16 with four concurrent requests took **12.83 s** with **98.38% agreement**. Both returned the correct top-ten set, but neither produced a completely correct order. These are single runs on a controlled synthetic fixture, not performance or accuracy guarantees. The linked report includes token usage, request counts, methodology, and raw results.
 
 The README animations have [reproducible rendering instructions](docs/animations.md). Rendering them requires no API key and makes no live requests.
 

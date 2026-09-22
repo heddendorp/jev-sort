@@ -1,0 +1,2264 @@
+{
+  "startedAt": "2026-09-22T20:05:37.918Z",
+  "runtime": "v24.18.0",
+  "platform": "darwin-arm64",
+  "sourceCommit": "a7be8f59a1950a260eb4051370acf7266722eec0",
+  "sorterSourceSha256": "b4a93caf6229d0a18fee2907e59b45428c01c4caeb8f17b845e47fce62f9c99a",
+  "methodology": "One live run per configuration on the same deterministic 100-ticket fixture. Severity labels are withheld. Correctness is measured against the explicit context policy. Timings include HTTP body reads, SDK retries, and benchmark instrumentation; no warmup or statistical latency claims.",
+  "predicate": "Most urgent customer issue first. Apply the severity priorities in context. Within the same severity, put the issue affecting more customers first.",
+  "context": {
+    "product": "An online store",
+    "policy": "Order severity from highest to lowest: (1) active loss of revenue from failed payments, (2) users unable to access their accounts, (3) degraded performance with working features, (4) cosmetic issues with working features, (5) documentation requests with nothing broken. Severity always takes precedence over affected customer count. Within the same severity, more affected customers means higher priority."
+  },
+  "input": [
+    {
+      "id": "T-087",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 70
+    },
+    {
+      "id": "T-097",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 170
+    },
+    {
+      "id": "T-017",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 170
+    },
+    {
+      "id": "T-041",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 10
+    },
+    {
+      "id": "T-031",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 110
+    },
+    {
+      "id": "T-092",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 120
+    },
+    {
+      "id": "T-048",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 80
+    },
+    {
+      "id": "T-082",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 20
+    },
+    {
+      "id": "T-019",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 190
+    },
+    {
+      "id": "T-053",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 130
+    },
+    {
+      "id": "T-050",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 100
+    },
+    {
+      "id": "T-051",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 110
+    },
+    {
+      "id": "T-085",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 50
+    },
+    {
+      "id": "T-070",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 100
+    },
+    {
+      "id": "T-095",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 150
+    },
+    {
+      "id": "T-059",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 190
+    },
+    {
+      "id": "T-021",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 10
+    },
+    {
+      "id": "T-039",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 190
+    },
+    {
+      "id": "T-056",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 160
+    },
+    {
+      "id": "T-065",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 50
+    },
+    {
+      "id": "T-029",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 90
+    },
+    {
+      "id": "T-058",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 180
+    },
+    {
+      "id": "T-064",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 40
+    },
+    {
+      "id": "T-074",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 140
+    },
+    {
+      "id": "T-018",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 180
+    },
+    {
+      "id": "T-046",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 60
+    },
+    {
+      "id": "T-055",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 150
+    },
+    {
+      "id": "T-030",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 100
+    },
+    {
+      "id": "T-035",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 150
+    },
+    {
+      "id": "T-036",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 160
+    },
+    {
+      "id": "T-010",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 100
+    },
+    {
+      "id": "T-023",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 30
+    },
+    {
+      "id": "T-083",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 30
+    },
+    {
+      "id": "T-028",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 80
+    },
+    {
+      "id": "T-033",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 130
+    },
+    {
+      "id": "T-004",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 40
+    },
+    {
+      "id": "T-086",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 60
+    },
+    {
+      "id": "T-071",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 110
+    },
+    {
+      "id": "T-013",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 130
+    },
+    {
+      "id": "T-047",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 70
+    },
+    {
+      "id": "T-024",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 40
+    },
+    {
+      "id": "T-096",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 160
+    },
+    {
+      "id": "T-099",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 190
+    },
+    {
+      "id": "T-078",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 180
+    },
+    {
+      "id": "T-040",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 200
+    },
+    {
+      "id": "T-016",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 160
+    },
+    {
+      "id": "T-049",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 90
+    },
+    {
+      "id": "T-001",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 10
+    },
+    {
+      "id": "T-014",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 140
+    },
+    {
+      "id": "T-067",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 70
+    },
+    {
+      "id": "T-090",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 100
+    },
+    {
+      "id": "T-054",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 140
+    },
+    {
+      "id": "T-032",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 120
+    },
+    {
+      "id": "T-042",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 20
+    },
+    {
+      "id": "T-007",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 70
+    },
+    {
+      "id": "T-100",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 200
+    },
+    {
+      "id": "T-011",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 110
+    },
+    {
+      "id": "T-006",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 60
+    },
+    {
+      "id": "T-027",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 70
+    },
+    {
+      "id": "T-060",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 200
+    },
+    {
+      "id": "T-063",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 30
+    },
+    {
+      "id": "T-066",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 60
+    },
+    {
+      "id": "T-044",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 40
+    },
+    {
+      "id": "T-069",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 90
+    },
+    {
+      "id": "T-025",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 50
+    },
+    {
+      "id": "T-080",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 200
+    },
+    {
+      "id": "T-068",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 80
+    },
+    {
+      "id": "T-088",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 80
+    },
+    {
+      "id": "T-038",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 180
+    },
+    {
+      "id": "T-002",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 20
+    },
+    {
+      "id": "T-005",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 50
+    },
+    {
+      "id": "T-034",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 140
+    },
+    {
+      "id": "T-061",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 10
+    },
+    {
+      "id": "T-084",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 40
+    },
+    {
+      "id": "T-062",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 20
+    },
+    {
+      "id": "T-072",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 120
+    },
+    {
+      "id": "T-020",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 200
+    },
+    {
+      "id": "T-094",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 140
+    },
+    {
+      "id": "T-015",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 150
+    },
+    {
+      "id": "T-089",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 90
+    },
+    {
+      "id": "T-073",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 130
+    },
+    {
+      "id": "T-076",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 160
+    },
+    {
+      "id": "T-079",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 190
+    },
+    {
+      "id": "T-093",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 130
+    },
+    {
+      "id": "T-008",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 80
+    },
+    {
+      "id": "T-052",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 120
+    },
+    {
+      "id": "T-075",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 150
+    },
+    {
+      "id": "T-098",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 180
+    },
+    {
+      "id": "T-045",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 50
+    },
+    {
+      "id": "T-077",
+      "message": "Profile icons look blurry, but all functions work normally.",
+      "affectedCustomers": 170
+    },
+    {
+      "id": "T-091",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 110
+    },
+    {
+      "id": "T-081",
+      "message": "Customers request an extra screenshot in the help guide; nothing is broken.",
+      "affectedCustomers": 10
+    },
+    {
+      "id": "T-012",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 120
+    },
+    {
+      "id": "T-043",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 30
+    },
+    {
+      "id": "T-003",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 30
+    },
+    {
+      "id": "T-037",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 170
+    },
+    {
+      "id": "T-022",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 20
+    },
+    {
+      "id": "T-057",
+      "message": "Product pages load slowly, but customers can still browse and buy.",
+      "affectedCustomers": 170
+    },
+    {
+      "id": "T-009",
+      "message": "Customers cannot complete checkout: every payment attempt fails.",
+      "affectedCustomers": 90
+    },
+    {
+      "id": "T-026",
+      "message": "Customers cannot sign in or access their accounts; there is no workaround.",
+      "affectedCustomers": 60
+    }
+  ],
+  "expected": [
+    "T-020",
+    "T-019",
+    "T-018",
+    "T-017",
+    "T-016",
+    "T-015",
+    "T-014",
+    "T-013",
+    "T-012",
+    "T-011",
+    "T-010",
+    "T-009",
+    "T-008",
+    "T-007",
+    "T-006",
+    "T-005",
+    "T-004",
+    "T-003",
+    "T-002",
+    "T-001",
+    "T-040",
+    "T-039",
+    "T-038",
+    "T-037",
+    "T-036",
+    "T-035",
+    "T-034",
+    "T-033",
+    "T-032",
+    "T-031",
+    "T-030",
+    "T-029",
+    "T-028",
+    "T-027",
+    "T-026",
+    "T-025",
+    "T-024",
+    "T-023",
+    "T-022",
+    "T-021",
+    "T-060",
+    "T-059",
+    "T-058",
+    "T-057",
+    "T-056",
+    "T-055",
+    "T-054",
+    "T-053",
+    "T-052",
+    "T-051",
+    "T-050",
+    "T-049",
+    "T-048",
+    "T-047",
+    "T-046",
+    "T-045",
+    "T-044",
+    "T-043",
+    "T-042",
+    "T-041",
+    "T-080",
+    "T-079",
+    "T-078",
+    "T-077",
+    "T-076",
+    "T-075",
+    "T-074",
+    "T-073",
+    "T-072",
+    "T-071",
+    "T-070",
+    "T-069",
+    "T-068",
+    "T-067",
+    "T-066",
+    "T-065",
+    "T-064",
+    "T-063",
+    "T-062",
+    "T-061",
+    "T-100",
+    "T-099",
+    "T-098",
+    "T-097",
+    "T-096",
+    "T-095",
+    "T-094",
+    "T-093",
+    "T-092",
+    "T-091",
+    "T-090",
+    "T-089",
+    "T-088",
+    "T-087",
+    "T-086",
+    "T-085",
+    "T-084",
+    "T-083",
+    "T-082",
+    "T-081"
+  ],
+  "networkBound": {
+    "paddedLength": 128,
+    "rounds": 28,
+    "maxComparisons": 1792
+  },
+  "runs": [
+    {
+      "name": "default",
+      "batchSize": 64,
+      "concurrency": 4,
+      "startedAt": "2026-09-22T20:05:37.931Z",
+      "elapsedMs": 16603,
+      "peakConcurrentRequests": 1,
+      "round": 28,
+      "totalRounds": 28,
+      "comparisons": 1046,
+      "requests": 28,
+      "inputTokens": 364194,
+      "outputTokens": 42749,
+      "httpAttempts": 28,
+      "successfulHttpAttempts": 28,
+      "modelVersions": [
+        "jev-1.13.0"
+      ],
+      "requestLatencyMs": {
+        "median": 406,
+        "p95": 1336
+      },
+      "evaluatedPairAccuracy": 0.9168260038240917,
+      "correctPairAnswers": 959,
+      "evaluatedPairAnswers": 1046,
+      "exactOrder": false,
+      "correctPositions": 25,
+      "adjacentViolations": 27,
+      "inversions": 354,
+      "severityInversions": 181,
+      "possiblePairs": 4950,
+      "globalPairAgreement": 0.9284848484848485,
+      "top10Overlap": 10,
+      "result": [
+        "T-020",
+        "T-019",
+        "T-018",
+        "T-017",
+        "T-016",
+        "T-015",
+        "T-013",
+        "T-014",
+        "T-012",
+        "T-011",
+        "T-010",
+        "T-008",
+        "T-007",
+        "T-004",
+        "T-001",
+        "T-039",
+        "T-005",
+        "T-003",
+        "T-002",
+        "T-040",
+        "T-038",
+        "T-037",
+        "T-034",
+        "T-029",
+        "T-035",
+        "T-036",
+        "T-033",
+        "T-031",
+        "T-032",
+        "T-030",
+        "T-021",
+        "T-060",
+        "T-028",
+        "T-027",
+        "T-026",
+        "T-025",
+        "T-024",
+        "T-023",
+        "T-022",
+        "T-058",
+        "T-006",
+        "T-056",
+        "T-059",
+        "T-053",
+        "T-055",
+        "T-054",
+        "T-045",
+        "T-078",
+        "T-057",
+        "T-052",
+        "T-051",
+        "T-049",
+        "T-050",
+        "T-048",
+        "T-046",
+        "T-042",
+        "T-041",
+        "T-073",
+        "T-044",
+        "T-065",
+        "T-043",
+        "T-080",
+        "T-095",
+        "T-085",
+        "T-009",
+        "T-076",
+        "T-077",
+        "T-075",
+        "T-047",
+        "T-071",
+        "T-072",
+        "T-069",
+        "T-067",
+        "T-068",
+        "T-066",
+        "T-096",
+        "T-062",
+        "T-099",
+        "T-097",
+        "T-093",
+        "T-079",
+        "T-089",
+        "T-074",
+        "T-070",
+        "T-090",
+        "T-087",
+        "T-100",
+        "T-088",
+        "T-094",
+        "T-086",
+        "T-064",
+        "T-063",
+        "T-092",
+        "T-061",
+        "T-082",
+        "T-084",
+        "T-083",
+        "T-098",
+        "T-091",
+        "T-081"
+      ],
+      "attempts": [
+        {
+          "round": 1,
+          "questions": 50,
+          "requestBytes": 56748,
+          "elapsedMs": 2265,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 2,
+          "questions": 50,
+          "requestBytes": 56748,
+          "elapsedMs": 1336,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 3,
+          "questions": 28,
+          "requestBytes": 32007,
+          "elapsedMs": 814,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 4,
+          "questions": 48,
+          "requestBytes": 54491,
+          "elapsedMs": 883,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 5,
+          "questions": 41,
+          "requestBytes": 46623,
+          "elapsedMs": 634,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 6,
+          "questions": 24,
+          "requestBytes": 27543,
+          "elapsedMs": 363,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 7,
+          "questions": 48,
+          "requestBytes": 54491,
+          "elapsedMs": 394,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 8,
+          "questions": 43,
+          "requestBytes": 48873,
+          "elapsedMs": 423,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 9,
+          "questions": 36,
+          "requestBytes": 40982,
+          "elapsedMs": 339,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 10,
+          "questions": 23,
+          "requestBytes": 26332,
+          "elapsedMs": 357,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 11,
+          "questions": 48,
+          "requestBytes": 54491,
+          "elapsedMs": 397,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 12,
+          "questions": 44,
+          "requestBytes": 49985,
+          "elapsedMs": 456,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 13,
+          "questions": 39,
+          "requestBytes": 44352,
+          "elapsedMs": 366,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 14,
+          "questions": 37,
+          "requestBytes": 42116,
+          "elapsedMs": 379,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 15,
+          "questions": 23,
+          "requestBytes": 26340,
+          "elapsedMs": 398,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 16,
+          "questions": 36,
+          "requestBytes": 41038,
+          "elapsedMs": 379,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 17,
+          "questions": 44,
+          "requestBytes": 49979,
+          "elapsedMs": 526,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 18,
+          "questions": 41,
+          "requestBytes": 46680,
+          "elapsedMs": 1053,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 19,
+          "questions": 36,
+          "requestBytes": 40997,
+          "elapsedMs": 435,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 20,
+          "questions": 32,
+          "requestBytes": 36508,
+          "elapsedMs": 1066,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 21,
+          "questions": 23,
+          "requestBytes": 26393,
+          "elapsedMs": 353,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 22,
+          "questions": 36,
+          "requestBytes": 40957,
+          "elapsedMs": 551,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 23,
+          "questions": 32,
+          "requestBytes": 36562,
+          "elapsedMs": 386,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 24,
+          "questions": 44,
+          "requestBytes": 49990,
+          "elapsedMs": 404,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 25,
+          "questions": 41,
+          "requestBytes": 46610,
+          "elapsedMs": 449,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 26,
+          "questions": 34,
+          "requestBytes": 38686,
+          "elapsedMs": 406,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 27,
+          "questions": 37,
+          "requestBytes": 42141,
+          "elapsedMs": 358,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 28,
+          "questions": 28,
+          "requestBytes": 31982,
+          "elapsedMs": 352,
+          "status": 200,
+          "model": "jev-1.13.0"
+        }
+      ],
+      "stages": [
+        {
+          "round": 1,
+          "totalRounds": 28,
+          "comparisons": 50,
+          "requests": 1,
+          "inputTokens": 17288,
+          "outputTokens": 2043,
+          "elapsedMs": 2275
+        },
+        {
+          "round": 2,
+          "totalRounds": 28,
+          "comparisons": 100,
+          "requests": 2,
+          "inputTokens": 34576,
+          "outputTokens": 4086,
+          "elapsedMs": 3612
+        },
+        {
+          "round": 3,
+          "totalRounds": 28,
+          "comparisons": 128,
+          "requests": 3,
+          "inputTokens": 44423,
+          "outputTokens": 5233,
+          "elapsedMs": 4432
+        },
+        {
+          "round": 4,
+          "totalRounds": 28,
+          "comparisons": 176,
+          "requests": 4,
+          "inputTokens": 61033,
+          "outputTokens": 7194,
+          "elapsedMs": 5318
+        },
+        {
+          "round": 5,
+          "totalRounds": 28,
+          "comparisons": 217,
+          "requests": 5,
+          "inputTokens": 75270,
+          "outputTokens": 8868,
+          "elapsedMs": 5954
+        },
+        {
+          "round": 6,
+          "totalRounds": 28,
+          "comparisons": 241,
+          "requests": 6,
+          "inputTokens": 83764,
+          "outputTokens": 9846,
+          "elapsedMs": 6320
+        },
+        {
+          "round": 7,
+          "totalRounds": 28,
+          "comparisons": 289,
+          "requests": 7,
+          "inputTokens": 100374,
+          "outputTokens": 11807,
+          "elapsedMs": 6718
+        },
+        {
+          "round": 8,
+          "totalRounds": 28,
+          "comparisons": 332,
+          "requests": 8,
+          "inputTokens": 115296,
+          "outputTokens": 13564,
+          "elapsedMs": 7144
+        },
+        {
+          "round": 9,
+          "totalRounds": 28,
+          "comparisons": 368,
+          "requests": 9,
+          "inputTokens": 127836,
+          "outputTokens": 15035,
+          "elapsedMs": 7485
+        },
+        {
+          "round": 10,
+          "totalRounds": 28,
+          "comparisons": 391,
+          "requests": 10,
+          "inputTokens": 135974,
+          "outputTokens": 15974,
+          "elapsedMs": 7843
+        },
+        {
+          "round": 11,
+          "totalRounds": 28,
+          "comparisons": 439,
+          "requests": 11,
+          "inputTokens": 152584,
+          "outputTokens": 17935,
+          "elapsedMs": 8243
+        },
+        {
+          "round": 12,
+          "totalRounds": 28,
+          "comparisons": 483,
+          "requests": 12,
+          "inputTokens": 167838,
+          "outputTokens": 19734,
+          "elapsedMs": 8701
+        },
+        {
+          "round": 13,
+          "totalRounds": 28,
+          "comparisons": 522,
+          "requests": 13,
+          "inputTokens": 181393,
+          "outputTokens": 21328,
+          "elapsedMs": 9069
+        },
+        {
+          "round": 14,
+          "totalRounds": 28,
+          "comparisons": 559,
+          "requests": 14,
+          "inputTokens": 194271,
+          "outputTokens": 22841,
+          "elapsedMs": 9450
+        },
+        {
+          "round": 15,
+          "totalRounds": 28,
+          "comparisons": 582,
+          "requests": 15,
+          "inputTokens": 202420,
+          "outputTokens": 23781,
+          "elapsedMs": 9849
+        },
+        {
+          "round": 16,
+          "totalRounds": 28,
+          "comparisons": 618,
+          "requests": 16,
+          "inputTokens": 214976,
+          "outputTokens": 25250,
+          "elapsedMs": 10233
+        },
+        {
+          "round": 17,
+          "totalRounds": 28,
+          "comparisons": 662,
+          "requests": 17,
+          "inputTokens": 230227,
+          "outputTokens": 27047,
+          "elapsedMs": 10762
+        },
+        {
+          "round": 18,
+          "totalRounds": 28,
+          "comparisons": 703,
+          "requests": 18,
+          "inputTokens": 244473,
+          "outputTokens": 28721,
+          "elapsedMs": 11819
+        },
+        {
+          "round": 19,
+          "totalRounds": 28,
+          "comparisons": 739,
+          "requests": 19,
+          "inputTokens": 257012,
+          "outputTokens": 30192,
+          "elapsedMs": 12257
+        },
+        {
+          "round": 20,
+          "totalRounds": 28,
+          "comparisons": 771,
+          "requests": 20,
+          "inputTokens": 268213,
+          "outputTokens": 31502,
+          "elapsedMs": 13325
+        },
+        {
+          "round": 21,
+          "totalRounds": 28,
+          "comparisons": 794,
+          "requests": 21,
+          "inputTokens": 276370,
+          "outputTokens": 32445,
+          "elapsedMs": 13679
+        },
+        {
+          "round": 22,
+          "totalRounds": 28,
+          "comparisons": 830,
+          "requests": 22,
+          "inputTokens": 288920,
+          "outputTokens": 33918,
+          "elapsedMs": 14233
+        },
+        {
+          "round": 23,
+          "totalRounds": 28,
+          "comparisons": 862,
+          "requests": 23,
+          "inputTokens": 300127,
+          "outputTokens": 35227,
+          "elapsedMs": 14621
+        },
+        {
+          "round": 24,
+          "totalRounds": 28,
+          "comparisons": 906,
+          "requests": 24,
+          "inputTokens": 315381,
+          "outputTokens": 37025,
+          "elapsedMs": 15027
+        },
+        {
+          "round": 25,
+          "totalRounds": 28,
+          "comparisons": 947,
+          "requests": 25,
+          "inputTokens": 329618,
+          "outputTokens": 38700,
+          "elapsedMs": 15479
+        },
+        {
+          "round": 26,
+          "totalRounds": 28,
+          "comparisons": 981,
+          "requests": 26,
+          "inputTokens": 341465,
+          "outputTokens": 40088,
+          "elapsedMs": 15887
+        },
+        {
+          "round": 27,
+          "totalRounds": 28,
+          "comparisons": 1018,
+          "requests": 27,
+          "inputTokens": 354364,
+          "outputTokens": 41604,
+          "elapsedMs": 16248
+        },
+        {
+          "round": 28,
+          "totalRounds": 28,
+          "comparisons": 1046,
+          "requests": 28,
+          "inputTokens": 364194,
+          "outputTokens": 42749,
+          "elapsedMs": 16602
+        }
+      ]
+    },
+    {
+      "name": "smaller-parallel-batches",
+      "batchSize": 16,
+      "concurrency": 4,
+      "startedAt": "2026-09-22T20:05:54.542Z",
+      "elapsedMs": 12827,
+      "peakConcurrentRequests": 4,
+      "round": 28,
+      "totalRounds": 28,
+      "comparisons": 1074,
+      "requests": 79,
+      "inputTokens": 392188,
+      "outputTokens": 44049,
+      "httpAttempts": 79,
+      "successfulHttpAttempts": 79,
+      "modelVersions": [
+        "jev-1.13.0"
+      ],
+      "requestLatencyMs": {
+        "median": 386,
+        "p95": 590
+      },
+      "evaluatedPairAccuracy": 0.9599627560521415,
+      "correctPairAnswers": 1031,
+      "evaluatedPairAnswers": 1074,
+      "exactOrder": false,
+      "correctPositions": 48,
+      "adjacentViolations": 20,
+      "inversions": 80,
+      "severityInversions": 10,
+      "possiblePairs": 4950,
+      "globalPairAgreement": 0.9838383838383838,
+      "top10Overlap": 10,
+      "result": [
+        "T-020",
+        "T-018",
+        "T-019",
+        "T-016",
+        "T-017",
+        "T-015",
+        "T-014",
+        "T-013",
+        "T-012",
+        "T-011",
+        "T-010",
+        "T-009",
+        "T-008",
+        "T-007",
+        "T-006",
+        "T-005",
+        "T-004",
+        "T-003",
+        "T-002",
+        "T-001",
+        "T-040",
+        "T-039",
+        "T-038",
+        "T-037",
+        "T-035",
+        "T-036",
+        "T-034",
+        "T-033",
+        "T-032",
+        "T-030",
+        "T-028",
+        "T-031",
+        "T-029",
+        "T-027",
+        "T-026",
+        "T-025",
+        "T-024",
+        "T-023",
+        "T-022",
+        "T-057",
+        "T-059",
+        "T-056",
+        "T-058",
+        "T-055",
+        "T-021",
+        "T-053",
+        "T-054",
+        "T-042",
+        "T-052",
+        "T-047",
+        "T-060",
+        "T-050",
+        "T-049",
+        "T-048",
+        "T-045",
+        "T-044",
+        "T-051",
+        "T-046",
+        "T-043",
+        "T-041",
+        "T-079",
+        "T-078",
+        "T-080",
+        "T-073",
+        "T-076",
+        "T-075",
+        "T-077",
+        "T-074",
+        "T-072",
+        "T-071",
+        "T-067",
+        "T-065",
+        "T-070",
+        "T-069",
+        "T-068",
+        "T-062",
+        "T-066",
+        "T-064",
+        "T-100",
+        "T-092",
+        "T-063",
+        "T-099",
+        "T-061",
+        "T-098",
+        "T-097",
+        "T-094",
+        "T-096",
+        "T-091",
+        "T-095",
+        "T-093",
+        "T-090",
+        "T-089",
+        "T-088",
+        "T-087",
+        "T-086",
+        "T-085",
+        "T-084",
+        "T-083",
+        "T-082",
+        "T-081"
+      ],
+      "attempts": [
+        {
+          "round": 1,
+          "questions": 16,
+          "requestBytes": 18522,
+          "elapsedMs": 333,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 1,
+          "questions": 16,
+          "requestBytes": 18508,
+          "elapsedMs": 1062,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 1,
+          "questions": 16,
+          "requestBytes": 18487,
+          "elapsedMs": 1025,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 1,
+          "questions": 2,
+          "requestBytes": 2770,
+          "elapsedMs": 777,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 2,
+          "questions": 16,
+          "requestBytes": 18522,
+          "elapsedMs": 358,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 2,
+          "questions": 16,
+          "requestBytes": 18508,
+          "elapsedMs": 353,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 2,
+          "questions": 16,
+          "requestBytes": 18487,
+          "elapsedMs": 347,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 2,
+          "questions": 2,
+          "requestBytes": 2770,
+          "elapsedMs": 331,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 3,
+          "questions": 16,
+          "requestBytes": 18569,
+          "elapsedMs": 352,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 3,
+          "questions": 6,
+          "requestBytes": 7226,
+          "elapsedMs": 285,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 4,
+          "questions": 16,
+          "requestBytes": 18522,
+          "elapsedMs": 367,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 4,
+          "questions": 16,
+          "requestBytes": 18508,
+          "elapsedMs": 402,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 4,
+          "questions": 16,
+          "requestBytes": 18487,
+          "elapsedMs": 326,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 5,
+          "questions": 16,
+          "requestBytes": 18525,
+          "elapsedMs": 325,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 5,
+          "questions": 16,
+          "requestBytes": 18479,
+          "elapsedMs": 319,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 5,
+          "questions": 7,
+          "requestBytes": 8382,
+          "elapsedMs": 319,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 6,
+          "questions": 16,
+          "requestBytes": 18539,
+          "elapsedMs": 302,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 6,
+          "questions": 4,
+          "requestBytes": 4992,
+          "elapsedMs": 309,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 7,
+          "questions": 16,
+          "requestBytes": 18522,
+          "elapsedMs": 335,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 7,
+          "questions": 16,
+          "requestBytes": 18508,
+          "elapsedMs": 356,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 7,
+          "questions": 16,
+          "requestBytes": 18487,
+          "elapsedMs": 334,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 8,
+          "questions": 16,
+          "requestBytes": 18523,
+          "elapsedMs": 374,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 8,
+          "questions": 16,
+          "requestBytes": 18501,
+          "elapsedMs": 347,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 8,
+          "questions": 11,
+          "requestBytes": 12875,
+          "elapsedMs": 333,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 9,
+          "questions": 16,
+          "requestBytes": 18487,
+          "elapsedMs": 363,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 9,
+          "questions": 16,
+          "requestBytes": 18519,
+          "elapsedMs": 356,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 9,
+          "questions": 7,
+          "requestBytes": 8380,
+          "elapsedMs": 576,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 10,
+          "questions": 16,
+          "requestBytes": 18522,
+          "elapsedMs": 386,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 10,
+          "questions": 12,
+          "requestBytes": 13972,
+          "elapsedMs": 305,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 11,
+          "questions": 16,
+          "requestBytes": 18522,
+          "elapsedMs": 389,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 11,
+          "questions": 16,
+          "requestBytes": 18508,
+          "elapsedMs": 335,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 11,
+          "questions": 16,
+          "requestBytes": 18487,
+          "elapsedMs": 366,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 12,
+          "questions": 16,
+          "requestBytes": 18506,
+          "elapsedMs": 308,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 12,
+          "questions": 16,
+          "requestBytes": 18491,
+          "elapsedMs": 324,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 12,
+          "questions": 13,
+          "requestBytes": 15134,
+          "elapsedMs": 427,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 13,
+          "questions": 16,
+          "requestBytes": 18546,
+          "elapsedMs": 341,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 13,
+          "questions": 16,
+          "requestBytes": 18473,
+          "elapsedMs": 362,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 13,
+          "questions": 14,
+          "requestBytes": 16240,
+          "elapsedMs": 365,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 14,
+          "questions": 16,
+          "requestBytes": 18519,
+          "elapsedMs": 407,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 14,
+          "questions": 16,
+          "requestBytes": 18472,
+          "elapsedMs": 402,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 14,
+          "questions": 8,
+          "requestBytes": 9506,
+          "elapsedMs": 410,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 15,
+          "questions": 16,
+          "requestBytes": 18506,
+          "elapsedMs": 378,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 15,
+          "questions": 10,
+          "requestBytes": 11785,
+          "elapsedMs": 376,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 16,
+          "questions": 16,
+          "requestBytes": 18525,
+          "elapsedMs": 464,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 16,
+          "questions": 16,
+          "requestBytes": 18505,
+          "elapsedMs": 473,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 16,
+          "questions": 4,
+          "requestBytes": 5049,
+          "elapsedMs": 456,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 17,
+          "questions": 16,
+          "requestBytes": 18556,
+          "elapsedMs": 390,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 17,
+          "questions": 16,
+          "requestBytes": 18467,
+          "elapsedMs": 411,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 17,
+          "questions": 13,
+          "requestBytes": 15096,
+          "elapsedMs": 473,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 18,
+          "questions": 16,
+          "requestBytes": 18533,
+          "elapsedMs": 408,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 18,
+          "questions": 16,
+          "requestBytes": 18495,
+          "elapsedMs": 366,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 18,
+          "questions": 9,
+          "requestBytes": 10641,
+          "elapsedMs": 400,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 19,
+          "questions": 16,
+          "requestBytes": 18549,
+          "elapsedMs": 427,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 19,
+          "questions": 16,
+          "requestBytes": 18469,
+          "elapsedMs": 433,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 19,
+          "questions": 9,
+          "requestBytes": 10616,
+          "elapsedMs": 361,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 20,
+          "questions": 16,
+          "requestBytes": 18480,
+          "elapsedMs": 369,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 20,
+          "questions": 15,
+          "requestBytes": 17422,
+          "elapsedMs": 410,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 21,
+          "questions": 16,
+          "requestBytes": 18489,
+          "elapsedMs": 542,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 21,
+          "questions": 7,
+          "requestBytes": 8441,
+          "elapsedMs": 431,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 22,
+          "questions": 16,
+          "requestBytes": 18467,
+          "elapsedMs": 355,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 22,
+          "questions": 16,
+          "requestBytes": 18498,
+          "elapsedMs": 524,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 22,
+          "questions": 4,
+          "requestBytes": 5025,
+          "elapsedMs": 421,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 23,
+          "questions": 16,
+          "requestBytes": 18460,
+          "elapsedMs": 497,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 23,
+          "questions": 16,
+          "requestBytes": 18589,
+          "elapsedMs": 394,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 23,
+          "questions": 2,
+          "requestBytes": 2789,
+          "elapsedMs": 363,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 24,
+          "questions": 16,
+          "requestBytes": 18513,
+          "elapsedMs": 367,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 24,
+          "questions": 16,
+          "requestBytes": 18482,
+          "elapsedMs": 501,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 24,
+          "questions": 11,
+          "requestBytes": 12888,
+          "elapsedMs": 515,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 25,
+          "questions": 16,
+          "requestBytes": 18518,
+          "elapsedMs": 505,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 25,
+          "questions": 16,
+          "requestBytes": 18427,
+          "elapsedMs": 590,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 25,
+          "questions": 11,
+          "requestBytes": 12923,
+          "elapsedMs": 443,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 26,
+          "questions": 16,
+          "requestBytes": 18527,
+          "elapsedMs": 418,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 26,
+          "questions": 16,
+          "requestBytes": 18424,
+          "elapsedMs": 461,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 26,
+          "questions": 9,
+          "requestBytes": 10703,
+          "elapsedMs": 425,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 27,
+          "questions": 16,
+          "requestBytes": 18550,
+          "elapsedMs": 476,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 27,
+          "questions": 16,
+          "requestBytes": 18389,
+          "elapsedMs": 349,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 27,
+          "questions": 6,
+          "requestBytes": 7346,
+          "elapsedMs": 439,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 28,
+          "questions": 16,
+          "requestBytes": 18452,
+          "elapsedMs": 476,
+          "status": 200,
+          "model": "jev-1.13.0"
+        },
+        {
+          "round": 28,
+          "questions": 14,
+          "requestBytes": 16259,
+          "elapsedMs": 485,
+          "status": 200,
+          "model": "jev-1.13.0"
+        }
+      ],
+      "stages": [
+        {
+          "round": 1,
+          "totalRounds": 28,
+          "comparisons": 50,
+          "requests": 4,
+          "inputTokens": 18377,
+          "outputTokens": 2052,
+          "elapsedMs": 1065
+        },
+        {
+          "round": 2,
+          "totalRounds": 28,
+          "comparisons": 100,
+          "requests": 8,
+          "inputTokens": 36754,
+          "outputTokens": 4104,
+          "elapsedMs": 1424
+        },
+        {
+          "round": 3,
+          "totalRounds": 28,
+          "comparisons": 122,
+          "requests": 10,
+          "inputTokens": 44936,
+          "outputTokens": 5008,
+          "elapsedMs": 1777
+        },
+        {
+          "round": 4,
+          "totalRounds": 28,
+          "comparisons": 170,
+          "requests": 13,
+          "inputTokens": 62272,
+          "outputTokens": 6975,
+          "elapsedMs": 2187
+        },
+        {
+          "round": 5,
+          "totalRounds": 28,
+          "comparisons": 209,
+          "requests": 16,
+          "inputTokens": 76556,
+          "outputTokens": 8573,
+          "elapsedMs": 2515
+        },
+        {
+          "round": 6,
+          "totalRounds": 28,
+          "comparisons": 229,
+          "requests": 18,
+          "inputTokens": 84050,
+          "outputTokens": 9390,
+          "elapsedMs": 2827
+        },
+        {
+          "round": 7,
+          "totalRounds": 28,
+          "comparisons": 277,
+          "requests": 21,
+          "inputTokens": 101386,
+          "outputTokens": 11357,
+          "elapsedMs": 3185
+        },
+        {
+          "round": 8,
+          "totalRounds": 28,
+          "comparisons": 320,
+          "requests": 24,
+          "inputTokens": 117034,
+          "outputTokens": 13120,
+          "elapsedMs": 3561
+        },
+        {
+          "round": 9,
+          "totalRounds": 28,
+          "comparisons": 359,
+          "requests": 27,
+          "inputTokens": 131319,
+          "outputTokens": 14720,
+          "elapsedMs": 4142
+        },
+        {
+          "round": 10,
+          "totalRounds": 28,
+          "comparisons": 387,
+          "requests": 29,
+          "inputTokens": 141512,
+          "outputTokens": 15867,
+          "elapsedMs": 4529
+        },
+        {
+          "round": 11,
+          "totalRounds": 28,
+          "comparisons": 435,
+          "requests": 32,
+          "inputTokens": 158848,
+          "outputTokens": 17834,
+          "elapsedMs": 4919
+        },
+        {
+          "round": 12,
+          "totalRounds": 28,
+          "comparisons": 480,
+          "requests": 35,
+          "inputTokens": 175165,
+          "outputTokens": 19680,
+          "elapsedMs": 5348
+        },
+        {
+          "round": 13,
+          "totalRounds": 28,
+          "comparisons": 526,
+          "requests": 38,
+          "inputTokens": 191824,
+          "outputTokens": 21567,
+          "elapsedMs": 5717
+        },
+        {
+          "round": 14,
+          "totalRounds": 28,
+          "comparisons": 566,
+          "requests": 41,
+          "inputTokens": 206443,
+          "outputTokens": 23209,
+          "elapsedMs": 6131
+        },
+        {
+          "round": 15,
+          "totalRounds": 28,
+          "comparisons": 592,
+          "requests": 43,
+          "inputTokens": 215979,
+          "outputTokens": 24275,
+          "elapsedMs": 6510
+        },
+        {
+          "round": 16,
+          "totalRounds": 28,
+          "comparisons": 628,
+          "requests": 46,
+          "inputTokens": 229263,
+          "outputTokens": 25750,
+          "elapsedMs": 6985
+        },
+        {
+          "round": 17,
+          "totalRounds": 28,
+          "comparisons": 673,
+          "requests": 49,
+          "inputTokens": 245575,
+          "outputTokens": 27594,
+          "elapsedMs": 7460
+        },
+        {
+          "round": 18,
+          "totalRounds": 28,
+          "comparisons": 714,
+          "requests": 52,
+          "inputTokens": 260541,
+          "outputTokens": 29274,
+          "elapsedMs": 7868
+        },
+        {
+          "round": 19,
+          "totalRounds": 28,
+          "comparisons": 755,
+          "requests": 55,
+          "inputTokens": 275508,
+          "outputTokens": 30957,
+          "elapsedMs": 8304
+        },
+        {
+          "round": 20,
+          "totalRounds": 28,
+          "comparisons": 786,
+          "requests": 57,
+          "inputTokens": 286734,
+          "outputTokens": 32230,
+          "elapsedMs": 8717
+        },
+        {
+          "round": 21,
+          "totalRounds": 28,
+          "comparisons": 809,
+          "requests": 59,
+          "inputTokens": 295258,
+          "outputTokens": 33172,
+          "elapsedMs": 9261
+        },
+        {
+          "round": 22,
+          "totalRounds": 28,
+          "comparisons": 845,
+          "requests": 62,
+          "inputTokens": 308536,
+          "outputTokens": 34650,
+          "elapsedMs": 9787
+        },
+        {
+          "round": 23,
+          "totalRounds": 28,
+          "comparisons": 879,
+          "requests": 65,
+          "inputTokens": 321140,
+          "outputTokens": 36047,
+          "elapsedMs": 10286
+        },
+        {
+          "round": 24,
+          "totalRounds": 28,
+          "comparisons": 922,
+          "requests": 68,
+          "inputTokens": 336780,
+          "outputTokens": 37811,
+          "elapsedMs": 10803
+        },
+        {
+          "round": 25,
+          "totalRounds": 28,
+          "comparisons": 965,
+          "requests": 71,
+          "inputTokens": 352418,
+          "outputTokens": 39576,
+          "elapsedMs": 11396
+        },
+        {
+          "round": 26,
+          "totalRounds": 28,
+          "comparisons": 1006,
+          "requests": 74,
+          "inputTokens": 367383,
+          "outputTokens": 41258,
+          "elapsedMs": 11862
+        },
+        {
+          "round": 27,
+          "totalRounds": 28,
+          "comparisons": 1044,
+          "requests": 77,
+          "inputTokens": 381332,
+          "outputTokens": 42819,
+          "elapsedMs": 12339
+        },
+        {
+          "round": 28,
+          "totalRounds": 28,
+          "comparisons": 1074,
+          "requests": 79,
+          "inputTokens": 392188,
+          "outputTokens": 44049,
+          "elapsedMs": 12827
+        }
+      ]
+    }
+  ]
+}

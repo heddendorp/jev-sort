@@ -32,7 +32,8 @@
     "test:package": "node scripts/package-smoke.mjs",
     "test:live": "node --env-file=.env --import=tsx scripts/live-smoke.ts",
     "docs:gifs": "tsx scripts/readme-trace.ts && python3 scripts/render-readme-gifs.py",
-    "benchmark": "tsx benchmarks/parallel.ts"
+    "benchmark": "tsx benchmarks/parallel.ts",
+    "benchmark:live": "node --env-file=.env --import=tsx benchmarks/live.ts"
   },
   "repository": {
     "type": "git",
