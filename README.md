@@ -10,6 +10,10 @@ const sorted = await jevSort(tickets, "Most urgent customer issue first", {
 
 You describe the order. Jev compares items. A parallel bitonic sorting network arranges them into a new array, batching independent questions into each API request.
 
+![Support tickets reorder according to a most-urgent-first rule and online-store context, while the original array remains unchanged.](https://raw.githubusercontent.com/heddendorp/jev-sort/main/docs/assets/fuzzy-sort.gif)
+
+Illustrative playback of the support-ticket example. Model judgments can vary. [View the still image](docs/assets/fuzzy-sort.png).
+
 ## Install
 
 Node.js 20+; ESM with TypeScript declarations. The package is prepared for npm as `jev-sort`; it is not yet published to the registry. To use the current repository:
@@ -126,6 +130,10 @@ Install `@typesafe-ai/sdk` as a direct dependency if importing it yourself. SDK 
 
 ## How parallel sorting works
 
+![Eight numbers move through six comparison stages. Four independent questions share each TypeSafe request, and the final array is in ascending order.](https://raw.githubusercontent.com/heddendorp/jev-sort/main/docs/assets/parallel-sort.gif)
+
+This animation follows the actual network schedule with deterministic numeric judgments and illustrative timing. It shows 24 comparisons in six requests; larger stages can use multiple concurrent requests. [View the still image](docs/assets/parallel-sort.png).
+
 1. Copy the input, retain original indices, and pad the comparison network to a power of two. Undefined values and holes go to the end locally.
 2. At each network stage, identify disjoint pairs that can be compared independently.
 3. Send multiple **Choice questions in one request** against shared state. Each question explicitly identifies its two items. TypeSafe evaluates these questions in parallel.
@@ -170,6 +178,8 @@ npm run test:live     # Opt-in real API smoke test: 8 numbers, at most 24 questi
 ```
 
 The benchmark compares the same sorting network and the same unique comparisons with one question per sequential request versus batched parallel requests. It uses a fixed 5 ms artificial delay per request; actual TypeSafe latency and throughput depend on state size, service load, and account limits.
+
+The README animations have [reproducible rendering instructions](docs/animations.md). Rendering them requires no API key and makes no live requests.
 
 ## Release
 

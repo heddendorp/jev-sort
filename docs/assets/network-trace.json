@@ -1,0 +1,387 @@
+{
+  "description": "Actual bitonic network schedule; deterministic numeric judgments; illustrative playback timing.",
+  "input": [
+    5,
+    1,
+    8,
+    3,
+    2,
+    7,
+    4,
+    6
+  ],
+  "stages": [
+    {
+      "before": [
+        5,
+        1,
+        8,
+        3,
+        2,
+        7,
+        4,
+        6
+      ],
+      "after": [
+        1,
+        5,
+        8,
+        3,
+        2,
+        7,
+        6,
+        4
+      ],
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "ascending": true,
+          "a": 5,
+          "b": 1,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "ascending": false,
+          "a": 8,
+          "b": 3,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "ascending": true,
+          "a": 2,
+          "b": 7,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "ascending": false,
+          "a": 4,
+          "b": 6,
+          "cached": false,
+          "swap": true
+        }
+      ]
+    },
+    {
+      "before": [
+        1,
+        5,
+        8,
+        3,
+        2,
+        7,
+        6,
+        4
+      ],
+      "after": [
+        1,
+        3,
+        8,
+        5,
+        6,
+        7,
+        2,
+        4
+      ],
+      "pairs": [
+        {
+          "left": 0,
+          "right": 2,
+          "ascending": true,
+          "a": 1,
+          "b": 8,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 1,
+          "right": 3,
+          "ascending": true,
+          "a": 5,
+          "b": 3,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 4,
+          "right": 6,
+          "ascending": false,
+          "a": 2,
+          "b": 6,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 5,
+          "right": 7,
+          "ascending": false,
+          "a": 7,
+          "b": 4,
+          "cached": false,
+          "swap": false
+        }
+      ]
+    },
+    {
+      "before": [
+        1,
+        3,
+        8,
+        5,
+        6,
+        7,
+        2,
+        4
+      ],
+      "after": [
+        1,
+        3,
+        5,
+        8,
+        7,
+        6,
+        4,
+        2
+      ],
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "ascending": true,
+          "a": 1,
+          "b": 3,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "ascending": true,
+          "a": 8,
+          "b": 5,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "ascending": false,
+          "a": 6,
+          "b": 7,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "ascending": false,
+          "a": 2,
+          "b": 4,
+          "cached": false,
+          "swap": true
+        }
+      ]
+    },
+    {
+      "before": [
+        1,
+        3,
+        5,
+        8,
+        7,
+        6,
+        4,
+        2
+      ],
+      "after": [
+        1,
+        3,
+        4,
+        2,
+        7,
+        6,
+        5,
+        8
+      ],
+      "pairs": [
+        {
+          "left": 0,
+          "right": 4,
+          "ascending": true,
+          "a": 1,
+          "b": 7,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 1,
+          "right": 5,
+          "ascending": true,
+          "a": 3,
+          "b": 6,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 2,
+          "right": 6,
+          "ascending": true,
+          "a": 5,
+          "b": 4,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 3,
+          "right": 7,
+          "ascending": true,
+          "a": 8,
+          "b": 2,
+          "cached": false,
+          "swap": true
+        }
+      ]
+    },
+    {
+      "before": [
+        1,
+        3,
+        4,
+        2,
+        7,
+        6,
+        5,
+        8
+      ],
+      "after": [
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pairs": [
+        {
+          "left": 0,
+          "right": 2,
+          "ascending": true,
+          "a": 1,
+          "b": 4,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 1,
+          "right": 3,
+          "ascending": true,
+          "a": 3,
+          "b": 2,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 4,
+          "right": 6,
+          "ascending": true,
+          "a": 7,
+          "b": 5,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 5,
+          "right": 7,
+          "ascending": true,
+          "a": 6,
+          "b": 8,
+          "cached": false,
+          "swap": false
+        }
+      ]
+    },
+    {
+      "before": [
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "after": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "ascending": true,
+          "a": 1,
+          "b": 2,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "ascending": true,
+          "a": 4,
+          "b": 3,
+          "cached": false,
+          "swap": true
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "ascending": true,
+          "a": 5,
+          "b": 6,
+          "cached": false,
+          "swap": false
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "ascending": true,
+          "a": 7,
+          "b": 8,
+          "cached": false,
+          "swap": false
+        }
+      ]
+    }
+  ],
+  "result": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "requests": 6,
+  "comparisons": 24
+}
